@@ -1,9 +1,9 @@
 ---
-title: talk-plugin-author-menu
-permalink: /plugin/talk-plugin-author-menu/
+title: boldium-talk-plugin-author-menu
+permalink: /plugin/boldium-talk-plugin-author-menu/
 layout: plugin
 plugin:
-    name: talk-plugin-author-menu
+    name: boldium-talk-plugin-author-menu
     default: true
     provides:
         - Client

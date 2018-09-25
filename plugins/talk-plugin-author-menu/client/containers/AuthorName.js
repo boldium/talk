@@ -62,9 +62,6 @@ class AuthorNameContainer extends React.Component {
       <AuthorName
         username={comment.user.username}
         contentSlot={contentSlot}
-        menuVisible={showMenuForComment === comment.id}
-        toggleMenu={this.toggleMenu}
-        hideMenu={this.hideMenu}
         slotPassthrough={slotPassthrough}
       />
     );
@@ -85,7 +82,7 @@ const slots = ['authorMenuInfos', 'authorMenuActions'];
 
 const mapStateToProps = ({ talkPluginAuthorMenu: state }) => ({
   contentSlot: state.contentSlot,
-  showMenuForComment: state.showMenuForComment,
+  showMenuForComment: false,
 });
 
 const mapDispatchToProps = dispatch =>
