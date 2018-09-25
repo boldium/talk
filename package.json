@@ -5,6 +5,8 @@
   "main": "app.js",
   "private": true,
   "scripts": {
+    "bold:docker": "docker run -p 127.0.0.1:6379:6379 -d redis && docker run -p 127.0.0.1:27017:27017 -d mongo",
+    "bold:start": "yarn build && yarn watch:server",
     "generate-introspection": "WEBPACK=TRUE NODE_ENV=test ./scripts/generateIntrospectionResult.js",
     "clean": "rm -rf dist client/coral-framework/graphql/introspection.json docs/source/_data/introspection.json",
     "watch": "npm-run-all clean generate-introspection --parallel watch:*",
