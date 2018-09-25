@@ -1,0 +1,281 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500');
+@font-face {
+    font-family: 'boldium-icons';
+    src: url('data:application/octet-stream;base64,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') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    font: 500 .875rem/1.571 'Roboto', sans-serif;
+    --f2: 400 .75rem/1.416 Roboto, 'Roboto', sans-serif;
+    --f3: 400 .875rem/1.571 Roboto, 'Roboto', sans-serif;
+    --f4: 500 .875rem/1.428 Roboto, 'Roboto', sans-serif;
+    --f5: 700 1.625rem/1.307 Roboto, 'Roboto', sans-serif;
+
+    --icon: 'boldium-icons';
+    --i-airplane: '\2708';
+    --i-clapping: '👏';
+
+    --purple: #686BB0;
+
+    --white: #fff;
+
+    --grey100: #e6e6e6;
+    --grey200: #afafaf;
+    --grey300: #888;
+    --grey400: #4D4D4D;
+}
+
+:not(.material-icons) {
+    font: var(--f4);
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+a, button {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+/* Comment box */
+
+    /* SHAME: Comment box weird layout hacks */
+        
+        [id="stream"] {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        [id="stream"] > * {
+            width: 100%;
+            margin: .5rem 0;
+        }
+
+        [id="commentBox"] * {
+            display: flex;
+            flex: 1 0 auto;
+            margin: 0;
+            padding: 0;
+            position: static;
+        }
+        .talk-slot-comment-input-area {
+            display: none;
+        }
+        .talk-slot-draft-area {
+            margin-right: 1rem;
+        }
+        .talk-plugin-commentbox-button-container {
+            flex: 0 1 1.875rem;
+        }
+
+    /* SHAME: end */
+
+    .talk-plugin-commentbox-textarea /* Comment textarea */
+    {
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 2rem;
+        border: 1px solid var(--grey200);
+        box-sizing: border-box;
+        display: block;
+        flex: 1 1 auto;
+        font: .75rem/1.875rem Roboto, sans-serif;
+        height: 1.875rem;
+        min-height: 0;
+        min-width: 100%;
+        padding: 0 .75rem;
+        position: relative;
+        resize: none;
+    }
+    /* Reply comment textarea */
+
+        .talk-plugin-replies-textarea /* wrapper around reply comment box */
+        {
+            padding-bottom: 2.875rem;
+        }
+
+        .talk-slot-draft-area
+        {
+            width: 100%;
+        }
+        .talk-plugin-replies-textarea *:not(button):not(.talk-plugin-commentbox-button-container) 
+        {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+
+    .talk-plugin-commentbox-textarea::placeholder /* "Post a comment" */
+    {
+        color: var(--grey300);
+        font: inherit;
+        
+    }
+
+    .talk-plugin-commentbox-button, /* Comment box Submit button */
+    .talk-plugin-commentbox-button:disabled /*  note: we should come up with disabled state */
+    {
+        background-color: var(--purple);
+        border-radius: 2rem;
+        color: var(--grey100);
+        display: block;
+        flex: 0 0 1.875rem;
+        font: 1.5rem/1 var(--icon);
+        height: 1.875rem;
+        min-width: 0;
+        overflow: hidden;
+        padding: 0;
+        position: relative;
+        width: 1.875rem;
+    }
+
+    .talk-plugin-replies-textarea,
+    .talk-plugin-commentbox-button-container /* reply button  */
+    {
+        display: flex;
+        align-items: center;
+        padding-left: 2.875rem;
+    }
+
+    .talk-plugin-commentbox-button:before /* Comment box Submit button cute airplane */
+    {
+        content: var(--i-airplane);
+        margin: -.2rem .6125rem;
+    }
+
+
+/* "All comments" heading above comment stream " */
+
+    .talk-stream-tab-container .talk-tab-button /* "All Comments" */
+    {
+        font: var(--f5);
+        color: var(--grey400);
+        border: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+        position: relative;
+    }
+
+    .talk-tab-count /* "All comments" number*/
+    {
+        color: inherit;
+        font: inherit;
+        background-color: inherit;
+        margin: 0;
+        padding: 0;
+        position: static;
+    }
+
+
+/* Comment Stream */
+    
+    .talk-stream-comment-wrapper /* commment layout */
+    {
+        padding: 0;
+        border-top: 1px solid var(--grey100);
+    }
+    
+    .talk-stream-comment-wrapper .talk-stream-comment-wrapper /* reply comment layout*/
+    {
+        margin: 0 0 0 2.875rem; /* this should be the same size as gravitar image width + gravitar image margin-right */
+    }
+
+    .talk-stream-comment {
+        display: flex;
+        padding: 1.5rem 0 1.5rem;
+    }
+    .talk-stream-comment-header-container /* user name */
+    {
+        display: block;
+        width: 100%;
+    }
+
+    .talk-gravatar-image /* gravatar image */
+    {
+        border-radius: 9rem;
+        width: 1.875rem;
+        height: 1.875rem;
+        margin-top: .3rem;
+        margin-right: 1rem;
+    }
+    
+    .coralStreamEmbed_iframe-line /* Comment content */
+    {
+        font: var(--f3);
+        color: var(--grey300);
+    }
+
+    .talk-stream-comment-user-name, /* comment username */
+    {
+        color: var(--purple);
+    }
+
+    .talk-stream-comment-footer 
+    {
+        margin-top: 1rem;
+    }
+
+    .talk-plugin-flags-button-text, /* report flag */
+    .talk-plugin-replies-reply-button /* reply */
+    {
+        font: var(--f4);
+        color: var(--purple);
+        line-height: 1;
+        padding: 0 2rem;
+    }
+
+    .talk-plugin-respect-button.talk-plugin-respect-button /* respect or applause icon 
+    SHAME: since talk is using 2 classes to style this button, we have to also. :( */
+    {
+        color: var(--purple);
+        font: 2rem/1 var(--icon);
+        margin: -.3rem 0;
+    }
+    .talk-plugin-respect-count /* respect or applause count */
+    {
+        margin: 0 1rem;
+    }
+
+
+/* Viewing Options Dropdown */
+
+    .talk-tab-bar {
+        padding: 1rem 0;
+    }
+    .talk-stream-filter-wrapper {
+        border-top: 1px solid var(--grey100);
+        border-bottom: 1px solid var(--grey100);
+        color: var(--purple);
+        font: var(--f4);
+        padding: 1rem 0;
+        text-align: right;
+        width: 100%;
+        position: relative;
+    }
+
+    .talk-stream-filter-wrapper *:not(.material-icons) {
+        color: inherit;
+        font: inherit;
+        position: inherit;
+    }
+
+
+/* Hidden Content */
+    .talk-plugin-flags-icon,    /* ⚑ - comment "Report" icon  */
+    .talk-plugin-replies-icon , /* ⤴️ - comment "Reply" icon */
+    .talk-plugin-tag-label      /* Comment Author Name or username - user type, example: Staff */
+    {
+        display: none;
+    }
+
+
+
+/* Admin stuff */
+
+    a.talk-embed-stream-moderation-link /* "Moderate this stream" link */
+    {
+        color: var(--purple);
+    }
