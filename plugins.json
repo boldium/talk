@@ -1,0 +1,25 @@
+{
+  "server": [
+    "talk-plugin-featured-comments",
+    "talk-plugin-local-auth",
+    "talk-plugin-profile-data",
+    
+    "talk-plugin-gravatar",
+    "boldium-no-timestamp",
+    "boldium-talk-plugin-respect"
+  ],
+  "client": [
+    "talk-plugin-local-auth",
+    "talk-plugin-moderation-actions",
+    "talk-plugin-sort-most-replied",
+    "talk-plugin-sort-most-respected",
+    "talk-plugin-sort-newest",
+    "talk-plugin-sort-oldest",
+    "talk-plugin-viewing-options",
+
+    "talk-plugin-author-menu",
+    "talk-plugin-gravatar",
+    "boldium-no-timestamp",
+    "boldium-talk-plugin-respect"
+  ]
+}
