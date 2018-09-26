@@ -278,6 +278,7 @@ a, button {
 
         /* SHAME: since talk is using 2 classes to style this button, I'll be adding the container ID to overide :( */
         #talk-embed-stream-container .talk-load-more-button {
+            border-radius: .25rem;
             background: transparent;
             border: 1px solid;
             color: var(--purple);
@@ -292,6 +293,26 @@ a, button {
         #talk-embed-stream-container .talk-load-more-button:hover {
             background: var(--purple);
             color: var(--white);
+        }
+
+        .talk-load-more-replies .talk-load-more /* container for load more replies button */
+        {
+            border: none;
+            padding: 1rem 0 0;
+        }
+
+        #talk-embed-stream-container .talk-load-more-replies .talk-load-more-button /* load more replies button */
+        {   
+            background: transparent;
+            border: none;
+            color: var(--purple);
+            padding: 1rem 0;
+            margin-left: 2.875rem;
+        }
+        #talk-embed-stream-container .talk-load-more-replies .talk-load-more-button:hover,
+        #talk-embed-stream-container .talk-load-more-replies .talk-load-more-button:focus
+        {
+            text-decoration: underline;
         }
 
 /* Viewing Options Dropdown */
@@ -315,7 +336,6 @@ a, button {
         font: inherit;
         position: inherit;
     }
-
 
 /* Hidden Content */
     .talk-load-more:empty,
