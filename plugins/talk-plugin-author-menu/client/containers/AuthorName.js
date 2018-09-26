@@ -2,12 +2,10 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect, withFragments } from 'plugin-api/beta/client/hocs';
 import { bindActionCreators } from 'redux';
-import AuthorName from '../components/AuthorName';
+// import AuthorName from '../components/AuthorName';
 import {
   setContentSlot,
   resetContentSlot,
-  openMenu,
-  closeMenu,
 } from '../actions';
 import { compose, gql } from 'react-apollo';
 import {
@@ -21,31 +19,11 @@ class AuthorNameContainer extends React.Component {
     const changes = getShallowChanges(this.props, nextProps);
     if (changes.length === 1 && changes[0] === 'showMenuForComment') {
       const commentId = this.props.comment.id;
-      if (
-        commentId !== this.props.showMenuForComment &&
-        commentId !== nextProps.showMenuForComment
-      ) {
-        return false;
-      }
     }
 
     // Prevent Slot from rerendering when no props has shallowly changed.
     return changes.length !== 0;
   }
-
-  toggleMenu = () => {
-    if (this.props.showMenuForComment === this.props.comment.id) {
-      this.props.closeMenu();
-    } else {
-      this.props.openMenu(this.props.comment.id);
-    }
-  };
-
-  hideMenu = () => {
-    if (this.props.showMenuForComment === this.props.comment.id) {
-      this.props.closeMenu();
-    }
-  };
 
   render() {
     const {
@@ -53,17 +31,18 @@ class AuthorNameContainer extends React.Component {
       asset,
       comment,
       contentSlot,
-      showMenuForComment,
     } = this.props;
 
     const slotPassthrough = { root, asset, comment };
 
     return (
-      <AuthorName
-        username={comment.user.username}
-        contentSlot={contentSlot}
+      <a 
+        href=""
         slotPassthrough={slotPassthrough}
-      />
+        contentSlot={contentSlot}
+      >
+        Valentina Tereshkova
+      </a>
     );
   }
 }
@@ -72,13 +51,13 @@ AuthorNameContainer.propTypes = {
   root: PropTypes.object.isRequired,
   asset: PropTypes.object.isRequired,
   comment: PropTypes.object.isRequired,
-  contentSlot: PropTypes.string,
-  showMenuForComment: PropTypes.string,
-  openMenu: PropTypes.func.isRequired,
-  closeMenu: PropTypes.func.isRequired,
+  contentSlot: PropTypes.string
 };
 
-const slots = ['authorMenuInfos', 'authorMenuActions'];
+const slots = [
+  'authorMenuInfos', 
+  'authorMenuActions'
+];
 
 const mapStateToProps = ({ talkPluginAuthorMenu: state }) => ({
   contentSlot: state.contentSlot,
@@ -90,8 +69,6 @@ const mapDispatchToProps = dispatch =>
     {
       setContentSlot,
       resetContentSlot,
-      openMenu,
-      closeMenu,
     },
     dispatch
   );
