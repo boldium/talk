@@ -34,6 +34,7 @@
     border-left: none;
     border-right: none;
     border-top: none;
+    padding: 0;
 }
 a, button {
     color: var(--purple);
@@ -154,7 +155,7 @@ a, button {
         color: var(--grey400);
         border: none;
         display: block;
-        margin: 0;
+        margin: 1rem 0 0;
         padding: 0;
         position: relative;
     }
@@ -185,7 +186,7 @@ a, button {
 
     .talk-stream-comment {
         display: flex;
-        padding: 1.5rem 0 1.5rem;
+        padding: 1.5rem 0 0;
     }
     .talk-stream-comment-header-container /* user name */
     {
@@ -193,13 +194,21 @@ a, button {
         width: 100%;
     }
 
-    .talk-gravatar-image /* gravatar image */
+    .talk-slot-comment-avatar img /* gravatar image */
     {
         border-radius: 9rem;
-        width: 1.875rem;
-        height: 1.875rem;
+        height: 1.9rem;
         margin-top: .3rem;
         margin-right: 1rem;
+        overflow: hidden;
+        width: 1.9rem;
+    }
+    
+    .talk-stream-comment-wrapper-level-1 .talk-slot-comment-avatar img /* reply gravatar image */
+    {
+        margin-top: .6rem;
+        width: 1.25rem;
+        height: 1.25rem;
     }
     
     .coralStreamEmbed_iframe-line /* Comment content */
@@ -213,32 +222,77 @@ a, button {
         color: var(--purple);
     }
 
-    .talk-stream-comment-footer 
-    {
-        margin-top: 1rem;
-    }
+    /* comment actions */
 
-    .talk-plugin-flags-button-text, /* report flag */
-    .talk-plugin-replies-reply-button /* reply */
-    {
-        font: var(--f4);
-        color: var(--purple);
-        line-height: 1;
-        padding: 0 2rem;
-    }
+        .talk-stream-comment-actions-container {
+            padding-top: 1rem;
+        }
 
-    .talk-plugin-respect-button.talk-plugin-respect-button /* respect or applause icon 
-    SHAME: since talk is using 2 classes to style this button, we have to also. :( */
-    {
-        color: var(--purple);
-        font: 2rem/1 var(--icon);
-        margin: -.3rem 0;
-    }
-    .talk-plugin-respect-count /* respect or applause count */
-    {
-        margin: 0 1rem;
-    }
+        .commentActionsRight, 
+        .replyActionsRight
+        {
+            justify-content: flex-start;
+        }
 
+        .talk-plugin-replies-reply-button, /* reply wrapper */
+        .talk-plugin-flags-button /* report wrapper*/
+        {
+            display: flex;
+            margin:0 .5rem;
+            padding: .75rem 0 1.5rem;
+        }
+
+        .talk-plugin-flags-button-text, /* report */
+        .talk-plugin-replies-reply-button /* reply */
+        {   
+            color: var(--purple);
+            font: var(--f4);
+        }
+
+        .talk-plugin-respect-container /* respect container */
+        {
+            padding: 0;
+            margin: 0 4rem 0 0;
+        }
+
+        #talk-embed-stream-container .talk-plugin-respect-button /* respect or applause icon 
+        SHAME: since talk is using 2 classes to style this button, I'll be adding the container ID to overide :( */
+        {
+            color: var(--purple);
+            font: 2rem/1 var(--icon);
+            margin: 0;
+            padding: 0 0 1.5rem;
+        }
+        .talk-plugin-respect-count /* respect or applause count */
+        {
+            margin: 0 1rem;
+        }
+
+    /* Show More Replies button */
+        .talk-load-more /* talk more button container */
+        {
+            border-top: 1px solid var(--grey100);
+            padding: 2.25rem 0 0;
+            text-align: left;
+        }
+
+        /* SHAME: since talk is using 2 classes to style this button, I'll be adding the container ID to overide :( */
+        #talk-embed-stream-container .talk-load-more-button {
+            background: transparent;
+            border: 1px solid;
+            color: var(--purple);
+            font: var(--f4);
+            height: auto;
+            margin: 0;
+            padding: 1.125rem 2.25rem;
+            width: auto;
+        }
+
+        #talk-embed-stream-container .talk-load-more-button:focus,
+        #talk-embed-stream-container .talk-load-more-button:hover {
+            background: var(--purple);
+            color: var(--white);
+        }
 
 /* Viewing Options Dropdown */
 
@@ -264,18 +318,13 @@ a, button {
 
 
 /* Hidden Content */
+    .talk-load-more:empty,
+    .talk-embed-stream-moderation-container, /* Moderate this stream link, under the comment box */
+    .talk-embed-stream-tab-bar > ul[role="tablist"].talk-tab-bar, /* tab bar above content for: /content/configure/myprofile/ */
+    .talk-slot-comment-info-bar, /* User dropdown on name */
     .talk-plugin-flags-icon,    /* ⚑ - comment "Report" icon  */
     .talk-plugin-replies-icon , /* ⤴️ - comment "Reply" icon */
     .talk-plugin-tag-label      /* Comment Author Name or username - user type, example: Staff */
     {
         display: none;
-    }
-
-
-
-/* Admin stuff */
-
-    a.talk-embed-stream-moderation-link /* "Moderate this stream" link */
-    {
-        color: var(--purple);
     }
