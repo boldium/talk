@@ -140,10 +140,13 @@ a, button {
         padding-left: 2.875rem;
     }
 
-    .talk-plugin-commentbox-button:before /* Comment box Submit button cute airplane */
+    .talk-plugin-commentbox-button.talk-plugin-commentbox-button /* Comment box Submit button cute airplane */
     {
-        content: var(--i-airplane);
-        margin: -.2rem .6125rem;
+        color: rgba(0, 0, 0, 0);
+        background-image: url('./images/white-paper-plane.svg');
+        background-size: 1rem;
+        background-position: .525rem center;
+        background-repeat: no-repeat;
     }
 
 
